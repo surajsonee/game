@@ -1,0 +1,8 @@
+import django_tables2 as tables
+from socialapp.models import Registration
+
+class PersonTable(tables.Table):
+    class Meta:
+        model = Registration
+        # add class="paleblue" to <table> tag
+        attrs = {"class": "paleblue"}

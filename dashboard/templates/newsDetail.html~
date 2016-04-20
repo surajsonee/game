@@ -1,0 +1,106 @@
+{% load staticfiles %}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	 {% block head %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>NewsDetail</title>
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" type="text/css" href= {% static "css/bootstrap.min.css" %}>
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href= {% static "css/one-page-wonder.css" %}>
+	<link rel="stylesheet" type="text/css" href= {% static "css/custom.css" %}>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+{% endblock %}
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Social App</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#about">About</a>
+					</li>
+					<li>
+						<a href="#services">Services</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	<!-- Page Content -->
+	<div class="container c1">
+		<div class="row header">
+			<div>
+				<h1>A LOGO</h1>
+			</div>
+			<div class="city-name-container">
+				<h2><a href="#">News</a></h2>
+			</div>
+		</div>
+		<div id="below-logo"></div>
+		<div class="row myrow">
+			<div class="title">News Title</div>
+			<div class="small-desc">08 April 2016, Fashion Show,  By Tatiana</div>
+			<div class="jumbotron" id="post-image-slider"><img src="http://www.wilhelminanews.com/wp-content/uploads/2016/02/NASTYA-ABRAMOVA_3.1-PHILLIP-LIM_FW16.jpg" alt="img" /></div>
+
+			<div class="full-text">
+				
+			{% for detail in newsinfo %}
+			print 'hello'
+			{{ detail.title }}
+			{{ detail.newsvideourl }}
+			{{ detail.fburl }}
+			{{ detail.twiterurl }}
+			{{ detail.youtubeurl }}
+			{% endfor %} <br>
+			<a href="{{ detail.fburl }}"><img src={% static "img/facebook.png" %} width="50" height="50"></a>
+			<img src={% static "img/twitter.png" %} width="50" height="50">
+			<img src={% static "img/linkedin.png" %} width="50" height="50">
+			<img src={% static "img/youtube.png" %} width="50" height="50">
+			</div>
+			<div class="share-btn"></div>
+		</div>
+		<hr class="featurette-divider">
+		<!-- Footer -->
+		<footer>
+			<div class="row">
+				<div class="col-lg-12">
+					<p>Copyright &copy; Your Website 2014</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- /.container -->
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

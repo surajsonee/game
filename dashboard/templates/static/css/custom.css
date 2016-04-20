@@ -1,0 +1,38 @@
+﻿body{font-family:"Times New Roman",Times,serif}
+.container.c1 {margin-top: 60px;}
+.row.header {text-align: center;margin-bottom:40px;}
+.city-name-container {background: rgba(0, 0, 0, 0) url("../img/div.gif") repeat-x scroll 0 18px;height: 19px;width: 503px;display: block;margin: 10px auto 0;text-align: center;}
+.city-name-container h2 {background: #fff none repeat scroll 0 0;color: #000;display: inline-block;font-family: "Times New Roman",Times,serif;font-size: 1.2em;font-style: italic;font-weight: normal;height: 18px;line-height: 20px;margin: 4px auto 0;padding: 0 15px;text-align: center;width: auto;}
+#below-logo {background: #222222 none repeat scroll 0 0;clear: both;height: 45px;margin: 21px 0px 20px 20px;text-align: center;width: auto;}
+footer {text-align: center;}
+.row.myrow {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.title {
+    color: #000;
+    font-size: 22px !important;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding-right: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: scale(1, 1.2);
+	 
+}
+.small-desc {
+    margin-top: 20px;
+    text-align: center;
+	 font-size: 0.9em;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+#post-image-slider {
+    text-align: center;
+}
+.full-text {
+	font-size: 17px;
+	line-height: 25px;
+	text-align: justify;
+}
