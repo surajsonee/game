@@ -31,6 +31,14 @@
 			font-family: "Courier New", Courier, monospace
 			
 		}
+.col-sm-4.twitter {
+    max-height: 500px !important;
+    overflow: scroll;
+}
+.django_instagram_media_wall_item {
+    margin: 2px;
+    width: 23% !important;
+}
 
 </style>{% endblock %}
 </head>
@@ -47,9 +55,20 @@
   	<br>
 	<div class="row">
 		<div class="col-sm-4" style="background-color:white;">
-			<h3>TWITTER</h3>
-				<a class="twitter-timeline" href="https://twitter.com/dipoosuraj" data-widget-id="717574654173405184">Tweets by @dipoosuraj</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
-		</div>
+			<h3>NEWS</h3>
+		<!--<a href="/news_detail/{{ detail.id }}"> -->
+			<ul class="list-group">
+			{% for detail in newsinfo %}
+			<li class="list-group-item">
+				<a style="text-decoration:none;" href="/details/{{ detail.id }}">
+						<p>{{ detail.title }}</p>
+						<p>{{ detail.newstext }}</p>
+				</a>
+			</li>
+			{% endfor %}
+	</ul>	
+    	</div>
+
 
 		<div class="col-sm-4" style="background-color:white;">
 			<h3>FACEBOOK</h3>
@@ -68,11 +87,9 @@
 
 		<div class="col-sm-4" style="background-color:white;">
 			<h3>INSTAGRAM</h3>
-			  	{% load instagram_client %}
-				{% instagram_recent_media count=6 %}
-				{% for media in recent_media %}
-				<img src="{{ media|thumbnail }}"/>
-				{% endfor %}    
+{% load instagram_client %}
+{% instagram_recent_media_wall %}
+
     	</div>
 
 	</div> <!--row div -->
@@ -93,22 +110,14 @@
 				<script type="IN/JYMBII" data-companyid="1756" data-format="inline"></script>    
     
     	</div>
+		<div class="col-sm-4 twitter" style="background-color:white;">
+		<h3>TWITTER</h3>
+				<a class="twitter-timeline" href="https://twitter.com/dipoosuraj" data-widget-id="717574654173405184" data-tweet-limit="20">
+				Tweets by @dipoosuraj</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+		</div>
 		
-		<div class="col-sm-4" style="background-color:white;">
-			<h3>NEWS</h3>
-		<!--<a href="/news_detail/{{ detail.id }}"> -->
-			<ul class="list-group">
-			{% for detail in newsinfo %}
-			<li class="list-group-item">
-				<a style="text-decoration:none;" href="/details/{{ detail.id }}">
-						<p>{{ detail.title }}</p>
-						<p>{{ detail.newstext }}</p>
-				</a>
-			</li>
-			{% endfor %}
-	</ul>	
-    	</div>
-
+		
 	</div>
 </div>
     {% endblock %}

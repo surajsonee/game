@@ -32,6 +32,7 @@ def save_news(request):
 		title         = request.POST.get('title','Kunal')
 		newstext      = request.POST.get('newstext','This is dummy text to show you')
 		newsvideourl  = request.POST.get('newsvideourl','http://www.youtube.com/TusdxsxjQ1g/')
+		#image		  = request.POST.get('image')
 		fburl         = request.POST.get('fburl','http://www.facebook.com/')
 		twiterurl     = request.POST.get('twiterurl','http://www.twitter.com/')
 		youtubeurl    = request.POST.get('youtubeurl','http://www.youtube.com/')

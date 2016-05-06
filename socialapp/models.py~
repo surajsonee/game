@@ -7,6 +7,7 @@ class Registration(models.Model):
 	title        = models.CharField(max_length=200)
 	newstext     = models.CharField(max_length=200)
 	newsvideourl = models.CharField(max_length=200)
+	image        = models.FileField(upload_to='static/images')
 	fburl        = models.CharField(max_length=200)
 	twiterurl    = models.CharField(max_length=200)
 	youtubeurl   = models.CharField(max_length=200)

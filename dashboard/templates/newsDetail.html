@@ -73,17 +73,40 @@
 			<div class="full-text">
 				
 			{% for detail in newsinfo %}
-			print 'hello'
+			
 			{{ detail.title }}
 			{{ detail.newsvideourl }}
 			{{ detail.fburl }}
 			{{ detail.twiterurl }}
-			{{ detail.youtubeurl }}
-			{% endfor %} <br>
+			{{ detail.youtubeurl }}<br><br>
+			
+			{% if detail.fburl == None %}
+			
+			
+			{% else %}
 			<a href="{{ detail.fburl }}"><img src={% static "img/facebook.png" %} width="50" height="50"></a>
+			{% endif %}
+		
+			{% if detail.twiterurl == None %}
+			
+			
+			{% else %}
+			<a href="{{ detail.twiterurl }}"><img src={% static "img/twitter.png" %} width="50" height="50"></a>
+			{% endif %}
+			
+			{% if detail.youtubeurl == None %}
+			
+			
+			{% else %}
+			<a href="{{ detail.youtubeurl }}"><img src={% static "img/youtube.png" %} width="50" height="50"></a>
+			
+			{% endif %}
+			{% endfor %} <br>
+			<!--<a href="{{ detail.fburl }}"><img src={% static "img/facebook.png" %} width="50" height="50"></a>
 			<img src={% static "img/twitter.png" %} width="50" height="50">
 			<img src={% static "img/linkedin.png" %} width="50" height="50">
 			<img src={% static "img/youtube.png" %} width="50" height="50">
+-->
 			</div>
 			<div class="share-btn"></div>
 		</div>

@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Mishbah Razzaque <mishbahx@gmail.com>
+	SURAJ SONEE 
 
 Contributors
 ------------
