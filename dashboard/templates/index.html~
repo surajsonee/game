@@ -81,7 +81,7 @@
 				  fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));</script>
 			
-			<div class="fb-page" data-href="https://www.facebook.com/Propeers-1697587167151398/" data-tabs="timeline" data-width="350" data-height="560" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+			<div class="fb-page" data-href="https://www.facebook.com/Propeers-1697587167151398/" data-tabs="timeline" data-numposts="5" data-width="350" data-height="560" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
 			
 		</div>
 
